@@ -7,7 +7,6 @@ gem 'simple_form'
 gem 'thin'
 
 gem 'will_paginate'
-gem 'taps'
 gem 'pg'
 
 group :development do
@@ -15,10 +14,9 @@ group :development do
 end
 
 group :assets do
-  gem 'compass-rails'
   gem 'sass-rails'
   gem 'coffee-rails'
-  gem 'uglifier'
+  gem 'compass-rails'
   gem 'zurb-foundation'
 end
 
