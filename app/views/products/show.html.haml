@@ -1,0 +1,23 @@
+.row
+  .twelve.columns
+    .panel
+      %h5= "Подробнее о: #{@product.name}"
+      .row
+        .four.columns
+          .panel
+            = image_tag( asset_path('1.jpeg'), size: "200x200", alt: @product.name )
+        .four.columns
+          .panel
+            %br
+            %b Name:
+            = @product.name
+            %br
+            %b Description:
+            = @product.description
+            %br
+            %b Price:
+            = @product.price
+            $
+            %br
+            = link_to 'заказать', new_order_path, class: "small button"
+= link_to 'вернуться к просмотру продуктов', root_path, class: "small button"

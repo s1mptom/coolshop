@@ -1,0 +1,11 @@
+.four.columns.centered
+  %h3{:style => "text-align: center;"} Продукты
+  = will_paginate
+.row
+  .twelve.columns.centered
+    .panel
+      %ul.block-grid.three-up
+        -@products.each do |product|
+          = render product
+.four.columns.centered
+  = will_paginate

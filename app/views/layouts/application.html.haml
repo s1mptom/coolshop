@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title CoolShop
+    = stylesheet_link_tag    "foundation", :media => "all"
+    = javascript_include_tag "modernizr.foundation"
+    = csrf_meta_tags
+  %body
+    .row
+      .twelve.columns
+        .panel
+          %h3{:style => "text-align: center;"} Куча одинаковой херни по 999 баксов
+      .twelve.columns
+        - if notice
+          .alert-box.success= notice
+        - if alert
+          .alert-box.alert= notice
+        = yield

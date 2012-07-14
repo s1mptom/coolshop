@@ -1,0 +1,13 @@
+.six.columns.centered
+  %h4 Your Order
+  .panel
+    = simple_form_for @order do |f|
+      = f.input :name, label: "Name", as: :tel
+      %br
+      = f.input :email, label: "Email", placeholder: "user@domain.com"
+      %br
+      = f.input :phonenumber, label: "Phone Number"
+      %br
+      = f.input :comment, label: "Commentaries", as: :tel
+      %br
+      = f.button :submit, class: "small button"
