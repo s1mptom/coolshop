@@ -19,5 +19,5 @@
             = @product.price
             $
             %br
-            = button_to "Add to Cart", line_items_path(product_id: product), class: "small button"
+            = button_to "Add to Cart", line_items_path(product_id: @product), class: "small button"
 = link_to 'вернуться к просмотру продуктов', root_path, class: "small button"
