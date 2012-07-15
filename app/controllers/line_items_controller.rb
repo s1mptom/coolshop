@@ -22,7 +22,7 @@ class LineItemsController < ApplicationController
     @line_item = @cart.line_items.build(product: product)
 
     if @line_item.save
-      redirect_to @line_item.cart, :notice => "Item successfully added to the cart"
+      redirect_to @line_item.cart, notice: t('notices.success_item_add')
     else
       render "new"
     end
@@ -31,9 +31,9 @@ class LineItemsController < ApplicationController
   def update
     @line_item = LineItem.find(params[:id])
       if @line_item.update_attributes(params[:line_item])
-      redirect_to @line_item, notice: 'Line item was successfully updated.'
+        redirect_to @line_item, notice: 'Line item was successfully updated.'
       else
-        render action: "edit"
+        render "edit"
       end
   end
 
