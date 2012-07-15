@@ -2,4 +2,5 @@
 %ul
   - @cart.line_items.each do |item|
     %li= item.product.name
-= button_to "Checkout", new_order_path, method: :get
+= button_to "Checkout", new_order_path, class: "small button", method: :get
+= link_to 'вернуться к просмотру продуктов', root_path, class: "small button"
